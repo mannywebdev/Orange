@@ -1,11 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text } from "react-native";
+import Card from "./app/components/Card";
+import colors from "./app/config/colors";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
+  console.log("APP EXECUTED");
+  // return <WelcomeScreen />;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: colors.white,
+        padding: 20,
+        paddingTop: 100,
+      }}
+    >
+      <Card title="Macbook M1 Air" subTitle="20.00 Rs" />
+      <Card title="Macbook M1 Air" subTitle="20.00 Rs" />
     </View>
   );
 }
@@ -13,8 +24,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
