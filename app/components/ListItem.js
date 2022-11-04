@@ -1,48 +1,49 @@
 import React from "react";
-
-import { View, StyleSheet, Image } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 import colors from "../config/colors";
+
 import AppText from "./AppText";
 
-function Card({ title, subTitle, img }) {
+function ListItem({ title, subTitle, image }) {
   return (
-    <View style={styles.card}>
+    <View style={styles.container}>
       <Image
         style={styles.image}
         source={{
-          uri: "https://c4.wallpaperflare.com/wallpaper/109/839/817/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg",
+          uri: image,
         }}
       />
-      <View style={styles.details}>
+      <View>
         <AppText style={styles.title}>{title}</AppText>
         <AppText style={styles.subTitle}>{subTitle}</AppText>
       </View>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
-  card: {
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 10,
     borderRadius: 10,
-    marginBottom: 20,
+    marginHorizontal: 10,
     backgroundColor: colors.secondary,
-    overflow: "hidden",
-  },
-  details: {
-    paddingHorizontal: 15,
-    paddingVertical: 9,
   },
   image: {
-    width: "100%",
-    height: 200,
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    marginRight: 10,
   },
   title: {
-    marginBottom: 3,
     fontWeight: "700",
+    marginBottom: 4,
+    fontSize: 19,
   },
   subTitle: {
+    fontSize: 16,
     color: colors.black,
   },
 });
 
-export default Card;
+export default ListItem;
