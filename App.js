@@ -2,8 +2,10 @@ import { StyleSheet, View, Text } from "react-native";
 
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
+import ListItem from "./app/components/ListItem";
 import Screen from "./app/components/Screen";
 import colors from "./app/config/colors";
+import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
@@ -28,16 +30,12 @@ export default function App() {
   // return <ViewImageScreen />;
   // return <ListingDetailsScreen />;
   // return <MessagesScreen />;
-  return (
-    <Screen>
-      <Icon
-        name="email"
-        // size={50}
-        // backgroundColor={colors.secondary}
-        // iconColor={colors.primary}
-      />
-    </Screen>
-  );
+  // return (
+  //   <Screen>
+  //     <ListItem title="Manpreet Singh" ImageContainer={<Icon name="email" />} />
+  //   </Screen>
+  // );
+  return <AccountScreen />;
 }
 
 const styles = StyleSheet.create({

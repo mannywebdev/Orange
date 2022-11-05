@@ -14,7 +14,15 @@ import {
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
+function ListItem({
+  title,
+  subTitle,
+  image,
+  onPress,
+  renderRightActions,
+  ImageContainer,
+  style,
+}) {
   return (
     <GestureHandlerRootView>
       <Swipeable renderRightActions={renderRightActions}>
@@ -23,16 +31,21 @@ function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
           style={styles.feedback}
           onPress={onPress}
         >
-          <View style={styles.container}>
-            <Image
-              style={styles.image}
-              source={{
-                uri: image,
-              }}
-            />
-            <View>
+          <View style={[styles.container, style]}>
+            {ImageContainer}
+            {image && (
+              <Image
+                style={styles.image}
+                source={{
+                  uri: image,
+                }}
+              />
+            )}
+            <View style={styles.detailsContainer}>
               <AppText style={styles.title}>{title}</AppText>
-              <AppText style={styles.subTitle}>{subTitle}</AppText>
+              {subTitle && (
+                <AppText style={styles.subTitle}>{subTitle}</AppText>
+              )}
             </View>
           </View>
         </TouchableHighlight>
@@ -52,11 +65,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secondary,
     borderRadius: 10,
   },
+  detailsContainer: {
+    marginLeft: 10,
+  },
   image: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    marginRight: 10,
   },
   title: {
     fontWeight: "700",
