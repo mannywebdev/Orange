@@ -39,12 +39,10 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
   title: {
-    fontSize: 23,
+    fontSize: 22,
     fontWeight: "800",
-    marginBottom: 5,
   },
   subTitle: {
-    fontSize: 20,
     color: colors.black,
   },
   userContainer: {
