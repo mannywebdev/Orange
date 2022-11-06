@@ -10,7 +10,7 @@ function Card({ title, subTitle, img }) {
       <Image
         style={styles.image}
         source={{
-          uri: "https://c4.wallpaperflare.com/wallpaper/109/839/817/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg",
+          uri: img,
         }}
       />
       <View style={styles.details}>

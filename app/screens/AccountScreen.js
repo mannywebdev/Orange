@@ -53,7 +53,6 @@ function AccountScreen() {
 }
 const styles = StyleSheet.create({
   listing: {
-    marginVertical: 3,
     padding: 8,
     backgroundColor: colors.white,
   },

@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TextInput } from "react-native";
 
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
@@ -7,6 +7,7 @@ import Screen from "./app/components/Screen";
 import colors from "./app/config/colors";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ListingScreen from "./app/screens/ListingScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
@@ -29,13 +30,20 @@ export default function App() {
   // );
   // return <ViewImageScreen />;
   // return <ListingDetailsScreen />;
-  return <MessagesScreen />;
+  // return <MessagesScreen />;
   // return (
   //   <Screen>
   //     <ListItem title="Manpreet Singh" ImageContainer={<Icon name="email" />} />
   //   </Screen>
   // );
   // return <AccountScreen />;
+  // return <ListingScreen />;
+
+  return (
+    <Screen>
+      <TextInput placeholder="First Name" />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({
