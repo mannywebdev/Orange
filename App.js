@@ -29,13 +29,13 @@ export default function App() {
   // );
   // return <ViewImageScreen />;
   // return <ListingDetailsScreen />;
-  // return <MessagesScreen />;
+  return <MessagesScreen />;
   // return (
   //   <Screen>
   //     <ListItem title="Manpreet Singh" ImageContainer={<Icon name="email" />} />
   //   </Screen>
   // );
-  return <AccountScreen />;
+  // return <AccountScreen />;
 }
 
 const styles = StyleSheet.create({
