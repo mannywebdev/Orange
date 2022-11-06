@@ -8,10 +8,10 @@ import colors from "../config/colors";
 function ViewImageScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.closeIcon}>
+      <View style={styles.deleteIcon}>
         <MaterialIcons name="delete-outline" size={28} color="white" />
       </View>
-      <View style={styles.deleteIcon}>
+      <View style={styles.closeIcon}>
         <Ionicons name="close" size={30} color="white" />
       </View>
       <Image
@@ -26,7 +26,7 @@ function ViewImageScreen() {
 }
 
 const styles = StyleSheet.create({
-  closeIcon: {
+  deleteIcon: {
     position: "absolute",
     top: 40,
     left: 15,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.black,
   },
-  deleteIcon: {
+  closeIcon: {
     position: "absolute",
     top: 40,
     right: 15,

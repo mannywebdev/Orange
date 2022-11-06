@@ -12,7 +12,10 @@ function WelcomeScreen() {
       source={require("../assets/splash.png")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo.png")} />
+        <Image
+          style={styles.logo}
+          source={require("../assets/logo_secondary.png")}
+        />
         <AppText style={styles.tagLine}>Buy or sell something today!</AppText>
       </View>
       <View style={styles.buttonsContainer}>
