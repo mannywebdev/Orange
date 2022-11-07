@@ -6,4 +6,5 @@ export default {
   light: "rgb(211,211,211)",
   medium: "rgb(160,160,160)",
   dark: "rgb(96,96,96)",
+  red: "rgb(255,0,0)",
 };

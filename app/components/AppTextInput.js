@@ -30,12 +30,13 @@ const styles = StyleSheet.create({
     borderColor: colors.primary,
     padding: 10,
     flexDirection: "row",
-    marginVertical: 10,
+    marginVertical: 6,
   },
   icon: {
     marginRight: 10,
   },
   textInput: {
+    flex: 1,
     fontSize: 18,
     color: colors.dark,
   },

@@ -11,6 +11,7 @@ import colors from "./app/config/colors";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ListingScreen from "./app/screens/ListingScreen";
+import LoginScreen from "./app/screens/LoginScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
@@ -25,7 +26,7 @@ export default function App() {
   const [firstName, setFirstName] = useState();
   const [category, setCategory] = useState();
 
-  return <WelcomeScreen />;
+  return <LoginScreen />;
 }
 
 const styles = StyleSheet.create({
@@ -59,3 +60,15 @@ const styles = StyleSheet.create({
 // );
 // return <AccountScreen />;
 // return <ListingScreen />;
+// return (
+//   <Screen>
+//     <AppTextInput placeholder="Username" icon="email" />
+//     <AppPicker
+//       selectedItem={category}
+//       onSelectItem={(item) => setCategory(item)}
+//       items={categories}
+//       placeholder="Category"
+//       icon="apps"
+//     />
+//   </Screen>
+// );
